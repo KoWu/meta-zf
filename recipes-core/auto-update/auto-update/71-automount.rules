@@ -1,0 +1,2 @@
+# automount rules.
+KERNEL=="sd[a-p][1-9]", ACTION=="add", RUN+="/bin/systemctl --no-block start device-automount@%k.service"

@@ -1,0 +1,6 @@
+GPSD_SOCKET="/var/run/gpsd.sock"
+# The "-b" option prevents GPSD from reconfiguring the GPS module.
+GPSD_OPTIONS=
+GPS_DEVICE="/dev/ttyS1"
+GPS_DEVICE_BAUDRATE=9600
+GPS_ADDITIONAL_SOURCE=

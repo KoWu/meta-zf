@@ -1,0 +1,10 @@
+[Unit]
+Description=GPS (Global Positioning System) Daemon
+
+[Service]
+EnvironmentFile=/etc/default/gpsd
+ExecStartPre=/bin/stty -F $GPS_DEVICE $GPS_DEVICE_BAUDRATE raw -echo
+ExecStart=/usr/sbin/gpsd -N $GPSD_OPTIONS -F $GPSD_SOCKET $GPS_DEVICE $GPS_ADDITIONAL_SOURCE
+
+[Install]
+WantedBy=multi-user.target

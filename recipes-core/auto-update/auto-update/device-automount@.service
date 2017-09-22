@@ -1,0 +1,9 @@
+[Unit]
+Description=mounts a storage device and updates linux.
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/automountupdate.sh %I
+
+[Install]
+WantedBy=multi-user.target
