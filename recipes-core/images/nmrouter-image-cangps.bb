@@ -50,7 +50,6 @@ IMAGE_INSTALL_append = " \
                 kernel-devicetree \
                 python-subprocess \
                 networkmanager \
-                networkmanager-nmtui \
                 modemmanager \
                 board-descriptor \
                 sw-update \
@@ -80,6 +79,9 @@ IMAGE_INSTALL_append_am335x-nbhw16 = " \
                 ${PYTHON_PACKAGES} \
                 cangps-files \
                 auto-update \
+                libmodbus \
+                canopensocket \
+                mc \
                 "
 
 LICENSE = "BSD"
