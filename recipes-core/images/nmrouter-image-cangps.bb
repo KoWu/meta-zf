@@ -31,6 +31,7 @@ PYTHON_PACKAGES = " \
                 python3-gps3 \
                 python-pip \
                 python3-pip \
+                python-numpy \
               "
 
 IMAGE_INSTALL_append = " \
