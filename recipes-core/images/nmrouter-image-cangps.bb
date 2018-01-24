@@ -31,6 +31,8 @@ PYTHON_PACKAGES = " \
                 python3-gps3 \
                 python-pip \
                 python3-pip \
+                python-cython \
+                python3-cython \
                 python-numpy \
               "
 
