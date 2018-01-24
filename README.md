@@ -18,6 +18,7 @@ MACHINE = "am335x-nbhw16"
 DISTRO = "nmrouter"
 ```
 Modify *conf/bblayers.conf*
+Only add *<poky dir>/meta-zf* if you want to build the modified cangps image.
 ```sh
 BBLAYERS ?= " \
   <poky dir>/meta \
@@ -35,17 +36,22 @@ BBLAYERS ?= " \
 $ source oe-init-build-env nb800
 $ bitbake nmrouter-image
 ```
+or, for the cangps image, simply run
+```sh
+$ bitbake nmrouter-image-cangps
+```
 Output images can be found in *<poky dir>/nb800/tmp/deploy/images/am335x-nbhw16/<image>-<machine>.tar.gz*
 To save HDD space delete the entire *<poky dir>/nb800/tmp/* directory. Compiled packages are stored inside *sstate-cache*.
 
-# 3.1 Modify linux
-To menuconfig, build, deploy and integrate the configured linux use
+# 3.1 Modify linux (canpgs)
+To menuconfig, use
 ```sh
 $ bitbake linux-netmodule -c menuconfig
-$ bitbake linux-netmodule -c compile -f
-$ bitbake linux-netmodule
-$ bitbake nmrouter-image
 ```
+The generated *.config* can be found in */tmp/work/am335x_nbhw16-netmodule-linux-gnueabi/linux-netmodule/.../build/.config*
+Copy the config to */meta-zf/recipes-kernel/linux/linux-netmodule/* and rename it to *nbhw16_\*_defconfig*.
+Edit the *linux-netmodule_%.bbappend* accordingly.
+
 
 # 4. Flash
 Use the integrated sw-update script
