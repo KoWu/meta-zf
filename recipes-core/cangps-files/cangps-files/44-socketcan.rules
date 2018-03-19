@@ -1,1 +1,0 @@
-SUBSYSTEM=="net", KERNEL=="can[0-9]", RUN+="/bin/systemctl --no-block start socketcan@%k.service"

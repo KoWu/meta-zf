@@ -1,6 +1,6 @@
 inherit core-image
 
-SUMMARY = "nmrouter image supporting can and gps"
+SUMMARY = "nmrouter image based on rocko release"
 
 KERNEL_IMAGETYPE = "uImage"
 
@@ -63,7 +63,6 @@ IMAGE_INSTALL_append = " \
                 glibc-gconv-utf-16 \
                 glibc-gconv-utf-32 \
                 bridge-utils \
-                gpsd \
                 ${FIRMWARE} \
                 "
 
@@ -80,7 +79,6 @@ IMAGE_INSTALL_append_am335x-nbhw16 = " \
                 tcpdump \
                 python3 \
                 ${PYTHON_PACKAGES} \
-                cangps-files \
                 auto-update \
                 libmodbus \
                 canopensocket \
