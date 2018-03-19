@@ -1,10 +1,6 @@
 # Support for device tree generation
 FILES_kernel-devicetree = "/${KERNEL_IMAGEDEST}/devicetree*"
 
-python __anonymous () {
-    d.appendVar("PACKAGES", " kernel-devicetree")
-}
-
 do_install_append() {
 	if test -n "${KERNEL_DEVICETREE}"; then
 		for DTB in ${KERNEL_DEVICETREE}; do
