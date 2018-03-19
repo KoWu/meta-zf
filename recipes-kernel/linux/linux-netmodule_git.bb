@@ -8,8 +8,6 @@ DESCRIPTION = "Linux kernel for various NetModule hardware"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
-
 SRC_URI = " \
 	git://github.com/netmodule/linux.git;protocol=https \
 	file://nbhw16_zf_defconfig \
@@ -27,7 +25,7 @@ INSANE_SKIP_${PN} += "version-going-backwards"
 #If a KERNEL_DEFCONFIG is specified, the defconfig specified in SRC_URI will be overwritten!
 do_configure_append(){
     if [ "${KERNEL_DEFCONFIG}" != "" ]; then
-        cp ${WORKDIR}/${KERNEL_DEFCONFIG} ${S}/arch/arm/configs/${KERNEL_DEFCONFIG}
+        cp ${THISDIR}/${PN}/${KERNEL_DEFCONFIG} ${S}/arch/arm/configs/${KERNEL_DEFCONFIG}
         oe_runmake ${KERNEL_DEFCONFIG}
     fi
 }
