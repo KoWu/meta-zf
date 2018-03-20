@@ -37,6 +37,7 @@ PYTHON_PACKAGES = " \
               "
 
 IMAGE_INSTALL_append = " \
+                networkmanager \
                 hostapd \
                 iw \
                 crda \
@@ -52,8 +53,6 @@ IMAGE_INSTALL_append = " \
                 kernel-modules \
                 kernel-devicetree \
                 python-subprocess \
-                networkmanager \
-                modemmanager \
                 board-descriptor \
                 sw-update \
                 python-pip \
