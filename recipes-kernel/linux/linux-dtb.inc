@@ -38,7 +38,7 @@ do_deploy_append() {
 			install -d ${DEPLOYDIR}
 			install -m 0644 ${DTB_PATH} ${DEPLOYDIR}/${DTB_NAME}.dtb
 			cd ${DEPLOYDIR}
-			ln -sf ${DTB_NAME}.dtb ${DTB_SYMLINK_NAME}.dtb
+			ln -sf -- ${DTB_NAME}.dtb ${DTB_SYMLINK_NAME}.dtb
 			cd -
 		done
 	fi
