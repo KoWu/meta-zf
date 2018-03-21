@@ -39,6 +39,8 @@ PYTHON_PACKAGES = " \
 
 IMAGE_INSTALL_append = " \
                 networkmanager \
+                networkmanager-nmtui \
+                modemmanager \
                 hostapd \
                 iw \
                 crda \
