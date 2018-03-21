@@ -81,6 +81,7 @@ IMAGE_INSTALL_append_am335x-nbhw16 = " \
                 python3 \
                 ${PYTHON_PACKAGES} \
                 auto-update \
+                cangps-files \
                 libmodbus \
                 canopensocket \
                 mc \
