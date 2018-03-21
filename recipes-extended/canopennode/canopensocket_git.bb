@@ -3,10 +3,12 @@ DESCRIPTION = "Collection of CANopen tools running on Linux with socketCAN inter
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=75859989545e37968a99b631ef42722e"
 
-SRC_URI = "gitsm://github.com/CANopenNode/CANopenSocket.git"
+SRC_URI = "gitsm://github.com/CANopenNode/CANopenSocket.git;protocol=https"
 SRCREV = "6606856c76f5ac13f8db8d22766b078803af736c"
 
 S = "${WORKDIR}/git"
+
+TARGET_CC_ARCH += "${LDFLAGS}"
 
 do_compile() {
     cd ${S}/canopend

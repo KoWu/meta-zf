@@ -34,6 +34,7 @@ PYTHON_PACKAGES = " \
                 python-cython \
                 python3-cython \
                 python-numpy \
+                python3-numpy \
               "
 
 IMAGE_INSTALL_append = " \

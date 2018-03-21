@@ -1,5 +1,6 @@
 # Support for device tree generation
-FILES_kernel-devicetree = "/${KERNEL_IMAGEDEST}/devicetree*"
+FILES_kernel-devicetree = "/${KERNEL_IMAGEDEST}/devicetree* \
+                           /${KERNEL_IMAGEDEST}/am335x-nbhw16*"
 
 do_install_append() {
 	if test -n "${KERNEL_DEVICETREE}"; then
