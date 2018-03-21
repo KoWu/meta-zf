@@ -49,7 +49,6 @@ IMAGE_INSTALL_append = " \
                 bash \
                 iproute2 \
                 ethtool \
-                devmem2 \
                 openvpn \
                 iptables \
                 pciutils \
@@ -58,13 +57,13 @@ IMAGE_INSTALL_append = " \
                 python-subprocess \
                 board-descriptor \
                 sw-update \
-                python-pip \
                 rng-tools \
                 glibc-utils \
                 glibc-gconv \
                 glibc-gconv-utf-16 \
                 glibc-gconv-utf-32 \
                 bridge-utils \
+                gpsd \
                 ${FIRMWARE} \
                 "
 
