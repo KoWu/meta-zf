@@ -3,7 +3,9 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/${MACHINE}/${PN}:${THISDIR}/${PN}:"
 PACKAGECONFIG = " \
     ${@bb.utils.filter('DISTRO_FEATURES', 'efi ldconfig pam selinux usrmerge', d)} \
     hibernate \
+    logind \
     vconsole \
+    timesyncd \
     xz \
 "
 
