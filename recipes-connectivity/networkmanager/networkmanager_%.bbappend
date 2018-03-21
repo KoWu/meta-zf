@@ -1,5 +1,7 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
+PACKAGECONFIG_append = "modemmanager"
+
 SRC_URI_append = " \
         file://ethernet-2a2b6485-4d06-4b86-8051-751399c6881a \
         file://NetworkManager.conf \
