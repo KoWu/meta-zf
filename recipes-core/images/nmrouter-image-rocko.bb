@@ -35,6 +35,8 @@ PYTHON_PACKAGES = " \
                 python3-cython \
                 python-numpy \
                 python3-numpy \
+                python-cryptography \
+                python3-cryptography \
               "
 
 IMAGE_INSTALL_append = " \
